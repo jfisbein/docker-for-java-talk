@@ -1,0 +1,12 @@
+micronaut:
+  application:
+    name: quotes-frontend
+
+  server:
+    port: 8081
+
+  views:
+    thymeleaf:
+      suffix: ".html"
+      enabled: true
+      cacheable: false

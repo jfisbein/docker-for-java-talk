@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Home</title>
+</head>
+<body>
+<ol>
+    <li th:each="char : ${characters}" th:id="${#strings.replace(char,' ','')}">
+        <a href="" th:href="@{~/quote/{char}(char=${char})}" th:text="${char}">Bart Simpson</a>
+    </li>
+</ol>
+
+<span th:if="${quote}!=null" th:text="${quote.character} + ': ' + ${quote.text}">quote</span>
+</body>
+</html>

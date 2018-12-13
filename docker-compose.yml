@@ -1,0 +1,27 @@
+version: '3'
+services:
+    frontend:
+        build:
+            context: quotes-frontend
+        image: quotes-frontend
+        ports:
+            - 8081:80
+        depends_on:
+            - backend
+
+    backend:
+        build:
+            context: quotes-backend
+            dockerfile: Dockerfile.multi2
+        image: quotes-backend
+        ports:
+            - 8082:8080
+        environment:
+            - spring.data.mongodb.uri=mongodb://mongo/test
+        depends_on:
+            - mongo
+
+    mongo:
+        image: mongo:3.6
+        # ports:
+        #     - 27017:27017

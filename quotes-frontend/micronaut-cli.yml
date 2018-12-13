@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: com.example.quotes.frontend
+---
+testFramework: junit
+sourceLanguage: java
