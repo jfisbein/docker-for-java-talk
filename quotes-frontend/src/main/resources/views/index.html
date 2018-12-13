@@ -3,14 +3,29 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Home</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
 </head>
 <body>
-<ol>
-    <li th:each="char : ${characters}" th:id="${#strings.replace(char,' ','')}">
-        <a href="" th:href="@{~/quote/{char}(char=${char})}" th:text="${char}">Bart Simpson</a>
-    </li>
-</ol>
+<a th:each="char,status : ${characters}" th:href="@{~/quote/{char}(char=${char})}" href="#">
+    <img style="height: 180px"
+         th:src="@{'~/images/'+${#strings.replace(char,' ','')}+'.png'}" src="images/EdnaKrabappel.png">
+</a>
 
-<span th:if="${quote}!=null" th:text="${quote.character} + ': ' + ${quote.text}">quote</span>
+<div class="jumbotron w-75 p-3" th:if="${quote}!=null">
+    <h1 class="display-4" th:text="${quote.text}">quote</h1>
+    <p class="lead" th:text="${quote.character}">character</p>
+</div>
 </body>
 </html>

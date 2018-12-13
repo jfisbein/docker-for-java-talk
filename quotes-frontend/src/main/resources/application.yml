@@ -1,4 +1,10 @@
 micronaut:
+  router:
+    static-resources:
+      images:
+        paths:
+          - "classpath:views"
+
   application:
     name: quotes-frontend
 
