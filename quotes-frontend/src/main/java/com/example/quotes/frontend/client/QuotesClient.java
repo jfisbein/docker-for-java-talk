@@ -6,7 +6,7 @@ import io.micronaut.http.client.annotation.Client;
 
 import java.util.List;
 
-@Client("http://localhost:8080/quotes")
+@Client("${backend-url}/quotes")
 public interface QuotesClient {
     @Get
     List<Quote> getQuotes();
