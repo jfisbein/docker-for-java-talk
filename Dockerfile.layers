@@ -1,0 +1,7 @@
+# 1.15MB
+FROM busybox
+
+# 103MB
+RUN  mkdir /a
+ADD https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.9.tar.xz /a/
+RUN rm /a/linux-4.19.9.tar.xz
