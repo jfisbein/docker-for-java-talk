@@ -8,4 +8,4 @@ RUN mvn clean package --batch-mode
 FROM openjdk:8-jre-alpine
 COPY --from=maven target/quotes-backend-0.0.1.jar /myapp.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "myapp.jar"]
+ENTRYPOINT java ${JAVA_OPTS} -jar /myapp.jar

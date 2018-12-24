@@ -2,5 +2,6 @@ FROM maven:3.5-jdk-8
 COPY ./src ./src
 COPY ./pom.xml ./pom.xml
 RUN mvn clean package --batch-mode
+
 EXPOSE 8080
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "target/quotes-backend-0.0.1.jar"]
+ENTRYPOINT java ${JAVA_OPTS} -jar target/quotes-backend-0.0.1.jar
