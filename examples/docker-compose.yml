@@ -7,9 +7,8 @@ services:
         ports:
             - 8081:8080
         environment:
-            #- "backend-url=http://backend:8080"
-            - "MICRONAUT_HTTP_SERVICES_BACKENDCHARACTERS_URLS=http://backend:8080/"
-            - "MICRONAUT_HTTP_SERVICES_BACKENDQUOTES_URLS=http://backend:8080/"
+            - "MICRONAUT_HTTP_SERVICES_CHARACTERS_URLS=http://backend:8080/"
+            - "MICRONAUT_HTTP_SERVICES_QUOTES_URLS=http://backend:8080/"
         depends_on:
             - backend
 
