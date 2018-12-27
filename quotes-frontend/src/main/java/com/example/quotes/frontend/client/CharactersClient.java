@@ -5,8 +5,8 @@ import io.micronaut.http.client.annotation.Client;
 
 import java.util.List;
 
-@Client("backendcharacters")
+@Client("characters")
 public interface CharactersClient {
     @Get("characters")
-    public List<String> getCharacters();
+    List<String> getCharacters();
 }

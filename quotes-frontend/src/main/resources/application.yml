@@ -15,9 +15,9 @@ micronaut:
 
   http:
     services:
-      backendcharacters:
+      characters:
         urls:
           - http://backend/characters
-      backendquotes:
+      quotes:
         urls:
           - http://backend/quotes

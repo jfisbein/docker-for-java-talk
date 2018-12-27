@@ -12,13 +12,6 @@
         <exec.mainClass>com.example.quotes.frontend.Application</exec.mainClass>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>jcenter.bintray.com</id>
-            <url>https://jcenter.bintray.com</url>
-        </repository>
-    </repositories>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
