@@ -12,4 +12,12 @@ micronaut:
     thymeleaf:
       suffix: ".html"
       enabled: true
-      cacheable: false
+
+  http:
+    services:
+      backendcharacters:
+        urls:
+          - http://backend/characters
+      backendquotes:
+        urls:
+          - http://backend/quotes

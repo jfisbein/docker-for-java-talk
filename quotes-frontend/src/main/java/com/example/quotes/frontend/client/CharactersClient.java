@@ -5,8 +5,8 @@ import io.micronaut.http.client.annotation.Client;
 
 import java.util.List;
 
-@Client("${backend-url}/characters")
+@Client("backendcharacters")
 public interface CharactersClient {
-    @Get("/")
+    @Get("characters")
     public List<String> getCharacters();
 }

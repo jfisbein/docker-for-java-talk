@@ -25,6 +25,7 @@ public class QuotesController {
 
     @Get
     public ModelAndView index() {
+        System.out.println(charactersClient.getCharacters());
         return new ModelAndView("index", ImmutableMap.of("characters", charactersClient.getCharacters()));
     }
 

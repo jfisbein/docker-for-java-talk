@@ -6,7 +6,7 @@
     <artifactId>quotes-frontend</artifactId>
     <version>0.1</version>
     <properties>
-        <micronaut.version>1.0.1</micronaut.version>
+        <micronaut.version>1.0.2</micronaut.version>
         <jdk.version>1.8</jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <exec.mainClass>com.example.quotes.frontend.Application</exec.mainClass>
@@ -89,7 +89,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.2</version>
+            <version>1.18.4</version>
         </dependency>
 
         <dependency>
@@ -172,7 +172,7 @@
                             <path>
                                 <groupId>org.projectlombok</groupId>
                                 <artifactId>lombok</artifactId>
-                                <version>1.18.2</version>
+                                <version>1.18.4</version>
                             </path>
                             <path>
                                 <groupId>io.micronaut</groupId>
@@ -200,7 +200,7 @@
                                     <path>
                                         <groupId>org.projectlombok</groupId>
                                         <artifactId>lombok</artifactId>
-                                        <version>1.18.2</version>
+                                        <version>1.18.4</version>
                                     </path>
                                     <path>
                                         <groupId>io.micronaut</groupId>
