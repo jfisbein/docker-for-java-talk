@@ -1,0 +1,9 @@
+FROM quintenk/supervisor
+MAINTAINER Quinten Krijger "https://github.com/Krijger"
+RUN apt-get -y install wget \
+  && wget http://fastdl.mongodb.org/linux/mongodb-linux-x86_64-2.4.9.tgz -O /tmp/mongo.tar.gz \
+  && mkdir -p /data/db \
+  && ln -s /opt/mongodb/bin/mongo /usr/local/bin/mongo \
+  && ln -s /opt/mongodb/bin/mongod /usr/local/bin/mongod \
+  && (cd /tmp && tar zxf mongo.tar.gz && mv mongodb-* /opt/mongodb) \
+  && rm -rf /tmp/*

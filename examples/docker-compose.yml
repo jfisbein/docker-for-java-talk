@@ -2,18 +2,20 @@ version: '3'
 services:
     frontend:
         build:
-            context: quotes-frontend
+            context: ../quotes-frontend
         image: quotes-frontend
         ports:
             - 8081:8080
         environment:
-            - "backend-url=http://backend:8080"
+            #- "backend-url=http://backend:8080"
+            - "MICRONAUT_HTTP_SERVICES_BACKENDCHARACTERS_URLS=http://backend:8080/"
+            - "MICRONAUT_HTTP_SERVICES_BACKENDQUOTES_URLS=http://backend:8080/"
         depends_on:
             - backend
 
     backend:
         build:
-            context: quotes-backend
+            context: ../quotes-backend
             dockerfile: Dockerfile.multi2
         image: quotes-backend
         ports:
@@ -25,5 +27,5 @@ services:
 
     mongo:
         image: mongo:3.6
-        # ports:
-        #     - 27017:27017
+        ports:
+            - 27017:27017

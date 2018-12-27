@@ -2,9 +2,9 @@
 * https://speakerdeck.com/mseckington/the-art-of-slide-design
 * https://www.slideshare.net/EmilandDC/dear-nsa-let-me-take-care-ou
 
-### IDeas
+### Ideas
  * mencionar algo de `docker system prune`
- 
+
 ### Recursos
 
 #### Iconos
