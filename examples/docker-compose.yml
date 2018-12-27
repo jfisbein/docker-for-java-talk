@@ -9,22 +9,14 @@ services:
         environment:
             - "MICRONAUT_HTTP_SERVICES_CHARACTERS_URLS=http://backend:8080/"
             - "MICRONAUT_HTTP_SERVICES_QUOTES_URLS=http://backend:8080/"
-        depends_on:
-            - backend
 
     backend:
         build:
             context: ../quotes-backend
             dockerfile: Dockerfile.multi2
         image: quotes-backend
-        ports:
-            - 8082:8080
         environment:
             - spring.data.mongodb.uri=mongodb://mongo/test
-        depends_on:
-            - mongo
 
     mongo:
         image: mongo:3.6
-        ports:
-            - 27017:27017
