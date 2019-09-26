@@ -8,9 +8,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @Document(collection = "quotes")
 public class Quote {
-    @Id
-    private String id;
-    @Indexed
-    private final String character;
-    private final String text;
+
+  @Id
+  private String id;
+  @Indexed
+  private final String character;
+  private final String text;
 }

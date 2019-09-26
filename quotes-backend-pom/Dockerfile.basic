@@ -1,0 +1,5 @@
+FROM openjdk:8
+ADD target/quotes-backend-0.0.1.jar /myapp.jar
+
+EXPOSE 8080
+ENTRYPOINT java ${JAVA_OPTS} -jar /myapp.jar

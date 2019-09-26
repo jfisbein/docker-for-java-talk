@@ -21,8 +21,8 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@ContextConfiguration(initializers = {CharacterRepositoryTest.Initializer.class})
-public class CharacterRepositoryTest {
+@ContextConfiguration(initializers = {CharacterRepositoryIT.Initializer.class})
+public class CharacterRepositoryIT {
     @ClassRule
     public static GenericContainer mongo = new GenericContainer("mongo:3.6").withExposedPorts(27017);
 
