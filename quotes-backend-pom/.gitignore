@@ -6,3 +6,9 @@
 *.iws
 *.iml
 *.ipr
+
+### VS Code ###
+.classpath
+.factorypath
+.project
+.settings

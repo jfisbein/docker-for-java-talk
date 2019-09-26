@@ -33,7 +33,7 @@ public class CharacterRepositoryIT {
     @Override
     public void initialize(ConfigurableApplicationContext configurableApplicationContext) {
       TestPropertyValues
-          .of("spring.data.mongodb.uri=mongodb://localhost:27018/test")
+          .of("spring.data.mongodb.uri=mongodb://localhost:27017/test")
           .applyTo(configurableApplicationContext.getEnvironment());
     }
   }
